@@ -4,7 +4,7 @@
 
 A spawnable connector machine that enables inter-xstate-machine communication between diferrent host over various transmission protocols.
 
-This is meant to act as a framework for building a communication layer over the a specified protocol. (e.g. tcp, grpc, http, websocket, apache-kafka, zeromq/axon, redis-pub-sub)
+This is meant to act as a framework for sending "xstate-events" over the network by building a communication layer over the a specified protocol. (e.g. tcp, grpc, http, websocket, apache-kafka, zeromq/axon, redis-pub-sub)
 
 Encrypted by default. (AES-256-CBC)
 
