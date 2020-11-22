@@ -31,13 +31,14 @@ interface InitializedEvent {
 }
 ```
 
-**MESSAGE** - Sent to Parent when machine got message from another host.
+**MESSAGE** - Sent to Parent when machine got message from another host. Extend this definition for strictly typed events
 
 ```typescript
-interface MessageType {
-  type: "NOOP" || string;
-  [ key: string] : 
+interface MessageType<TPayload> extends AnyEventObject {
+  type: string,
+  payload: TPayload
 }
+
 ```
 
 ### Parent To Machine
@@ -56,9 +57,9 @@ interface SendEvent<MessageType>{
 
 List of States of this state machines
 
-- **Running**
-  Initializes ZeroMQ Process.
+- **start**
+  Started State of the machine, invokes setup of the communication layer.
 
 
-- **Running**
-  Initializes ZeroMQ Process.
+- **active**
+  State where the machine can actively send/recieve messages over specified protocol.
