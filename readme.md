@@ -2,8 +2,7 @@
 
 ## Description
 
-XState machine wrapper for Connector Machine. 
-A spawnable/invokable implementation for easy usage. 
+A spawnable connector machine that enables inter-xstate-machine communication between diferrent host over various transmission protocols.
 Encrypted by default. (AES-256-CBC)
 
 ## Context
