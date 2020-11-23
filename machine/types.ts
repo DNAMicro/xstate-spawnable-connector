@@ -24,7 +24,7 @@ export interface InitializedEvent <TPayload>{
 }
 
 export interface SendEvent<TPayload> {
-  type: "Send";
+  type: "SEND";
   payload: TPayload;
 }
 
